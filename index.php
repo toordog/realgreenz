@@ -104,8 +104,8 @@ session_start();
 
     // Fetch listing data and scheduled viewings concurrently
     Promise.all([
-      fetch('api.php').then(res => res.json()),
-      fetch('user_schedule.php').then(res => res.json())
+      fetch('lib/api.php').then(res => res.json()),
+      fetch('lib/user_schedule.php').then(res => res.json())
     ])
     .then(([listingData, scheduleData]) => {
       listings = listingData;
@@ -244,7 +244,7 @@ session_start();
       const time = document.getElementById('viewingTime').value;
 
       // Send data to the server to schedule the viewing
-      fetch('schedule.php', {
+      fetch('lib/schedule.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -281,7 +281,7 @@ session_start();
 
     // Cancels a previously scheduled viewing
     function cancelSchedule(id) {
-      fetch('cancel.php', {
+      fetch('lib/cancel.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `listing_id=${id}`

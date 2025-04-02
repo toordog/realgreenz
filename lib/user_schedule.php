@@ -6,7 +6,7 @@ session_start();
 header('Content-Type: application/json');
 
 // Build the path to the per-session schedules.json file
-$file = __DIR__ . '/storage/' . session_id() . '/schedules.json';
+$file = __DIR__ . '/../storage/' . session_id() . '/schedules.json';
 
 // If the file exists, decode its JSON content into an array; otherwise, use an empty array
 $schedules = file_exists($file) ? json_decode(file_get_contents($file), true) : [];

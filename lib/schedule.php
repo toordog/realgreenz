@@ -1,7 +1,7 @@
 <?php
 // Load the object-oriented class definitions for storage and schedule entries
-require 'obj/ScheduleStorage.php';
-require 'obj/ScheduleEntry.php';
+require '../obj/ScheduleStorage.php';
+require '../obj/ScheduleEntry.php';
 
 // Set the response content type to JSON
 header('Content-Type: application/json');

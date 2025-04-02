@@ -16,7 +16,7 @@ if (!$listingId) {
 }
 
 // Define the path to the session-specific schedules file
-$file = __DIR__ . '/storage/' . session_id() . '/schedules.json';
+$file = __DIR__ . '/../storage/' . session_id() . '/schedules.json';
 
 // Load the schedules from file if it exists; otherwise, use an empty array
 $schedules = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
