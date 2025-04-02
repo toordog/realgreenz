@@ -2,6 +2,23 @@
 if (!isset($_COOKIE['visited'])) {
     setcookie('visited', 'true', time() + (86400 * 30), "/");
 }
+
+// 7 days in seconds
+$sevenDays = 60 * 60 * 24 * 7;
+
+session_set_cookie_params([
+    'lifetime' => $sevenDays,
+    'path' => '/',
+    'domain' => '',       // use default
+    'secure' => false,    // set true if using HTTPS
+    'httponly' => true,
+    'samesite' => 'Lax'   // or 'Strict' or 'None'
+]);
+
+ini_set('session.gc_maxlifetime', $sevenDays);
+
+session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
