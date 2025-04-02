@@ -8,7 +8,7 @@ if (!isset($_COOKIE['visited'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RealGreenz</title>
+  <title>Real Estate Scheduler</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
@@ -18,7 +18,7 @@ if (!isset($_COOKIE['visited'])) {
   <div class="container py-4">
     <h1 class="text-success text-center mb-4">
          <i class="bi bi-house-fill me-2" style="font-size: 2rem;"></i>
-        RealGreenz
+        Real Estate Scheduler
     </h1>
     <div class="d-flex overflow-auto mb-3 gap-2 flex-nowrap" id="listingBar"></div>
     <div id="listingDetails" class="card shadow-sm p-4" style="display:none;"></div>
