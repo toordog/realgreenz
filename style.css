@@ -2,3 +2,43 @@
 body {
   font-family: 'Segoe UI', sans-serif;
 }
+
+#listingBar .btn.btn-light:hover {
+  background-color: #e6ffe6;
+  border-color: #28a745;
+  color: #198754;
+}
+
+/* Default listing button */
+.listing-btn {
+  width: 160px;
+  min-width: 160px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  position: relative;
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Hover effect */
+.listing-btn:hover {
+  background-color: #f4fff4;
+  border-color: #28a745;
+  color: #198754;
+}
+
+/* Selected (active) listing button */
+.listing-btn.active {
+  background-color: #d1f2d1;         /* Light green */
+  border-color: #198754 !important; /* Bootstrap green */
+  color: #145c2a;
+  font-weight: 500;
+}
